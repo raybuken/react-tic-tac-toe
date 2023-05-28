@@ -1,0 +1,85 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.turn{
+  font-size: 24px;
+}
+
+.board{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.square{
+  border: 3px solid rgb(233, 229, 229);
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.player{
+  margin: 8px;
+  font-size: 20px;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.player.active{
+  background-color: rgb(21, 178, 240);
+}
+
+.game-modal{
+  position: fixed;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 7px;
+  height: 350px;
+  width: 400px;
+  top: 100px;
+
+  background-color: rgb(47, 45, 45);
+}
+
+.game-modal .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: inherit;
+}
+
+.new-game{
+  padding: 5px;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  display: block;
+  margin: 15px auto;
+  transition: all .5s;
+  text-transform: uppercase;
+}
+
+.new-game:hover{
+  scale: 1.2;
+}
+
+@media(max-width: 450px) {
+  .game-modal{
+    min-width: 200px;
+    width: 75%;
+    min-height: 300px;
+  }
+}
